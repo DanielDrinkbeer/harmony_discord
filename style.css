@@ -1,0 +1,370 @@
+:root {
+    --harmony-color: grey; /* Example color for Harmony */
+    --discord-color: #4B0082; /* Example color for Discord */
+}
+
+h1 {
+    font-size: 72px;
+    text-transform: uppercase;
+}
+
+.harmony h1 {
+    background-color: black;
+    color: white;
+}
+
+.discord h1 {
+    color: navy;
+}
+
+h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
+    border: 2px solid var(--discord-color);
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: var(--harmony-color);
+    transition: background-color 0.3s, border-color 0.3s;
+    color: white;
+}
+
+body.discord h2 {
+    border-color: var(--harmony-color);
+    background-color: var(--discord-color);
+}
+
+h3 {
+    font-size: 28px;
+    text-align: center;
+}
+
+#introduction {
+    text-align: center;
+}
+
+#introduction h3, #theme h3 {
+    text-decoration: none;
+    font-weight: normal;  
+    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    display: block; /* Ensure the background fits only the text and not the entire line */
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#about-me h3 {
+    display: inline-block; /* Make the boxes fit around the text content */
+    padding: 10px; /* Space inside the box */
+    border: 2px solid #333; /* Border width and color */
+    border-radius: 8px; /* Rounded corners */
+    margin: 10px auto; /* Center the boxes and add space between them */
+    background-color: #f0f0f0; /* Background color of the box */
+}
+
+#about-me {
+    text-align: center;
+}
+
+/* Optional: Styling for Harmony Mode */
+.harmony #about-me h3 {
+    border-color: grey; /* Border color in harmony mode */
+    background-color: #e0e0e0; /* Background color in harmony mode */
+    color: #333; /* Text color in harmony mode */
+}
+
+/* Optional: Styling for Discord Mode */
+.discord #about-me h3 {
+    border-color: #333; /* Border color in discord mode */
+    background-color: #d4c3f3; /* Background color in discord mode */
+    color: white; /* Text color in discord mode */
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color: black;
+}
+
+.harmony #about-me h4 {
+    text-decoration: none;
+    font-weight: normal;  
+    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    display: block; /* Ensure the background fits only the text and not the entire line */
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; 
+}
+
+li {
+    font-size: 20px;
+    text-align: center;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    image-rendering: crisp-edges;
+}
+
+body.harmony {
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url(backgrounds/anfield.png);
+}
+
+body.discord {
+    background-color: #333;
+    color: #f0f0f0;
+    background-image: url('backgrounds/old_trafford.png');
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* Sticky Navigation Bar Styles */
+.sticky-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.harmony-color {
+    background-color: var(--harmony-color);
+    color: white;
+}
+
+.discord-color {
+    background-color: var(--discord-color);
+    color: var(--harmony-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links .nav-link {
+    text-decoration: none;
+    padding: 0 10px;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.sticky-bar .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sticky-bar .nav-link:hover {
+    color: #ccc;
+}
+
+
+/* Toggle Switch Styles in Navigation Bar */
+.toggle-switch {
+    position: relative;
+}
+
+/* Hide the checkbox */
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.slider {
+    background-color: #777; /* Adjust to desired color */
+    border-radius: 15px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input[type="checkbox"]:checked + .slider {
+    background-color: #555;
+}
+
+input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(70px);
+}
+
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+
+/* Social Media Container Styles */
+.social-media-container {
+    width: 100%;
+    margin: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.social-buttons {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    justify-items: center;
+    margin-top: 20px;
+}
+
+
+/* General styling for social buttons */
+.social-button {
+    display: flex; /* Use flexbox to align logo and text */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 150px; /* Button height */
+    width: 250px; /* Increased width for buttons */
+    padding: 10px; /* Padding inside the buttons */
+    font-size: 24px; /* Increased font size for button text */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #333; /* Default background color */
+    text-align: center; /* Center text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Instagram button */
+#instagram .social-button {
+    background-color: #E1306C; /* Instagram's color */
+}
+
+/* Facebook button */
+#facebook .social-button {
+    background-color: #3b5998; /* Facebook's color */
+}
+
+/* LinkedIn button */
+#linkedin .social-button {
+    background-color: #0077B5; /* LinkedIn's color */
+}
+
+/* GitHub button */
+#github .social-button {
+    background-color: #333; /* GitHub's color */
+}
+
+.social-button:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    opacity: 0.9; /* Dim on hover for visual feedback */
+}
+
+/* Social Logo Styling */
+.social-logo {
+    margin-right: 10px; /* Space between logo and text */
+    width: 60px; /* Logo width */
+    height: 60px; /* Logo height */
+}
+
+
+/* Hobbies List Styling */
+.hobbies-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* General styling for hobby panels */
+.hobby-panel {
+    flex: 0 0 48%; /* Take up about half the width of the container, with space for margins */
+    height: 200px; /* Set a fixed height to display the background */
+    margin-bottom: 20px; /* Space between panels */
+    color: white; /* Text color */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    border-radius: 8px; /* Rounded corners */
+    position: relative; /* For positioning background */
+    overflow: hidden; /* Hide overflowing content */
+    background-size: cover; /* Cover the entire panel with the background image */
+    background-position: center; /* Center the background image */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Animations for hobby panels */
+.hobby-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 200% 200%; /* Background image size */
+    z-index: -1; /* Place the background below the text */
+}
+
+/* Specific backgrounds for each hobby */
+.gaming {
+    background-image: url('jpgs/gaming-background.jpg'); /* Replace with the path to your gaming background image */
+}
+
+.hiking {
+    background-image: url('jpgs/hiking-background.jpg'); /* Replace with the path to your hiking background image */
+}
+
+.drinking {
+    background-image: url('jpgs/drinking-background.jpg'); /* Replace with the path to your drinking background image */
+}
+
+.eating {
+    background-image: url('jpgs/eating-background.jpg'); /* Replace with the path to your eating background image */
+}
