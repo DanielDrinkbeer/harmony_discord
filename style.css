@@ -182,7 +182,7 @@ footer {
 }
 
 .sticky-bar .nav-link:hover {
-    color: grey}
+    color: yellow}
 
 
 /* Toggle Switch Styles in Navigation Bar */
@@ -461,11 +461,27 @@ a button:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: center; /* Center buttons */
+        width: 100%; /* Make container extend across the width of the page */
     }
 
     .social-button {
         margin: 5px;
-        padding: 10px 20px; /* Adjust button size */
+        padding: 10px 15px; /* Adjust button size */
         font-size: 14px; /* Adjust text size */
+        height: 40px; /* Adjust height */
+        display: flex;
+        align-items: center; /* Center text vertically */
+        justify-content: center; /* Center text horizontally */
+        background-size: contain; /* Adjust background image size */
+        background-repeat: no-repeat; /* Do not repeat background image */
+        background-position: center; /* Center background image */
+    }
+
+    /* Adjust button sizes and layout */
+    .social-button {
+        display: inline-flex; /* Align items inline */
+        width: auto; /* Allow width to adjust automatically */
+        height: 50px; /* Make the buttons taller */
+        font-size: 14px; /* Adjust font size for better visibility */
     }
 }
