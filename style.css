@@ -515,4 +515,22 @@ a button:hover {
         margin-top: 20px;
         width: 100%; /* Ensure container spans the width of the page */
     }
+
+    .social-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; /* Round the buttons for logos */
+        justify-content: center; /* Center the logo */
+        padding: 0;
+    }
+
+    .social-logo {
+        margin-right: 0; /* Remove margin for mobile */
+        width: 30px;
+        height: 30px; /* Adjust the size of logos */
+    }
+
+    .button-text {
+        display: none; /* Hide text on mobile */
+    }
 }
