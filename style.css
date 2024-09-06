@@ -488,8 +488,7 @@ a button:hover {
         height: 34px; /* Adjust height */
         width: 64px; /* Adjust width */
         margin-left: auto; /* Push the toggle switch to the end */
-        /* No need for visibility control */
-        position: absolute;
+        position: relative;
     }
 
     .social-media-container {
