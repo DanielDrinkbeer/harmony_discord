@@ -6,6 +6,7 @@
 h1 {
     font-size: 72px;
     text-transform: uppercase;
+    padding-top: 30px;
 }
 
 .harmony h1 {
@@ -16,11 +17,11 @@ h1 {
 
 .discord h1 {
     color: navy;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h2 {
     font-size: 36px;
-    text-transform: uppercase;
     text-align: center;
     border: 2px solid var(--discord-color);
     padding: 10px;
@@ -28,13 +29,24 @@ h2 {
     border-radius: 8px;
     background-color: var(--harmony-color);
     transition: background-color 0.3s, border-color 0.3s;
+}
+
+.harmony h2 {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+.discord h2 {
+    color: #4CAF50;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: lowercase;
 }
 
 body.discord h2 {
     border-color: var(--harmony-color);
     background-color: var(--discord-color);
+
 }
 
 h3 {
@@ -79,7 +91,7 @@ h3 {
 /* Optional: Styling for Discord Mode */
 .discord #about-me h3 {
     border-color: #333; /* Border color in discord mode */
-    color: white; /* Text color in discord mode */
+    color: gray; /* Text color in discord mode */
 }
 
 h4 {
@@ -89,7 +101,7 @@ h4 {
     color: black;
 }
 
-.harmony #about-me h4 {
+#about-me h4 {
     text-decoration: none;
     font-weight: normal;  
     padding: 10px; /* Add some padding around the text */
@@ -122,6 +134,7 @@ body.harmony {
 body.discord {
     background-color: #333;
     color: #f0f0f0;
+    background-image: url('backgrounds/old_trafford.png');
 }
 
 .container {
@@ -265,14 +278,22 @@ input[type="checkbox"]:checked + .slider:before {
     width: 250px; /* Increased width for buttons */
     padding: 10px; /* Padding inside the buttons */
     font-size: 24px; /* Increased font size for button text */
-    color: white; /* Text color */
     border: none; /* Remove default border */
     border-radius: 8px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
-    background-color: #333; /* Default background color */
     text-align: center; /* Center text */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.harmony .social-button {
+    background-color: #333; /* Default background color */
+    color: white;
+}
+
+.discord .social-button {
+    background-color: white;
+    color: black;
 }
 
 /* Instagram button */
@@ -336,32 +357,37 @@ input[type="checkbox"]:checked + .slider:before {
     justify-content: center; /* Horizontally center text */
 }
 
-/* Animations for hobby panels */
-.hobby-panel::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: 200% 200%; /* Background image size */
-    z-index: -1; /* Place the background below the text */
-}
-
-/* Specific backgrounds for each hobby */
-.gaming {
+/* Specific backgrounds for each hobby in Harmony mode */
+.harmony .gaming {
     background-image: url('jpgs/gaming-background.jpg'); /* Replace with the path to your gaming background image */
 }
 
-.hiking {
+.harmony .hiking {
     background-image: url('jpgs/hiking-background.jpg'); /* Replace with the path to your hiking background image */
 }
 
-.skiing {
+.harmony .skiing {
     background-image: url('jpgs/skiing-background.jpg'); /* Replace with the path to your skiing background image */
 }
 
-.kayaking {
+.harmony .kayaking {
+    background-image: url('jpgs/kayaking-background.jpg'); /* Replace with the path to your kayaking background image */
+}
+
+/* Specific backgrounds for each hobby in Harmony mode */
+.discord .hiking {
+    background-image: url('jpgs/gaming-background.jpg'); /* Replace with the path to your gaming background image */
+}
+
+.discord .skiing {
+    background-image: url('jpgs/hiking-background.jpg'); /* Replace with the path to your hiking background image */
+}
+
+.discord .kayaking {
+    background-image: url('jpgs/skiing-background.jpg'); /* Replace with the path to your skiing background image */
+}
+
+.discord .gaming {
     background-image: url('jpgs/kayaking-background.jpg'); /* Replace with the path to your kayaking background image */
 }
 
