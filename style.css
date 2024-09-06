@@ -9,8 +9,9 @@ h1 {
 }
 
 .harmony h1 {
-    background-color: black;
-    color: white;
+    color: black;
+    font-family: cursive;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .discord h1 {
@@ -21,7 +22,6 @@ h2 {
     font-size: 36px;
     text-transform: uppercase;
     text-align: center;
-    font-style: italic;
     border: 2px solid var(--discord-color);
     padding: 10px;
     margin: 20px 0;
@@ -29,6 +29,7 @@ h2 {
     background-color: var(--harmony-color);
     transition: background-color 0.3s, border-color 0.3s;
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body.discord h2 {
@@ -39,6 +40,7 @@ body.discord h2 {
 h3 {
     font-size: 28px;
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #introduction {
@@ -48,7 +50,6 @@ h3 {
 #introduction h3, #theme h3 {
     text-decoration: none;
     font-weight: normal;  
-    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
     padding: 10px; /* Add some padding around the text */
     border-radius: 5px; /* Optional: Add rounded corners */
     display: block; /* Ensure the background fits only the text and not the entire line */
@@ -63,7 +64,6 @@ h3 {
     border: 2px solid #333; /* Border width and color */
     border-radius: 8px; /* Rounded corners */
     margin: 10px auto; /* Center the boxes and add space between them */
-    background-color: #f0f0f0; /* Background color of the box */
 }
 
 #about-me {
@@ -73,14 +73,12 @@ h3 {
 /* Optional: Styling for Harmony Mode */
 .harmony #about-me h3 {
     border-color: grey; /* Border color in harmony mode */
-    background-color: #e0e0e0; /* Background color in harmony mode */
     color: #333; /* Text color in harmony mode */
 }
 
 /* Optional: Styling for Discord Mode */
 .discord #about-me h3 {
     border-color: #333; /* Border color in discord mode */
-    background-color: #d4c3f3; /* Background color in discord mode */
     color: white; /* Text color in discord mode */
 }
 
@@ -94,7 +92,6 @@ h4 {
 .harmony #about-me h4 {
     text-decoration: none;
     font-weight: normal;  
-    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
     padding: 10px; /* Add some padding around the text */
     border-radius: 5px; /* Optional: Add rounded corners */
     display: block; /* Ensure the background fits only the text and not the entire line */
@@ -106,6 +103,7 @@ h4 {
 li {
     font-size: 20px;
     text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 body {
@@ -119,13 +117,11 @@ body {
 body.harmony {
     background-color: #f0f0f0;
     color: #333;
-    background-image: url(backgrounds/anfield.png);
 }
 
 body.discord {
     background-color: #333;
     color: #f0f0f0;
-    background-image: url('backgrounds/old_trafford.png');
 }
 
 .container {
@@ -192,7 +188,27 @@ footer {
 
 /* Toggle Switch Styles in Navigation Bar */
 .toggle-switch {
-    position: relative;
+    position: absolute; /* Absolute positioning to ensure it's always visible */
+    top: 10px; /* Adjust this value to fit your design */
+    right: 10px; /* Position it on the top-right */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    width: 60px; /* Adjust width for better visibility */
+    height: 30px; /* Adjust height for better visibility */
+}
+
+/* Adjustments for smaller screens (mobile) */
+@media screen and (max-width: 768px) {
+    .toggle-switch {
+        width: 50px; /* Slightly reduce the size of the toggle button for smaller screens */
+        height: 25px;
+        top: 15px; /* Position it slightly lower */
+        right: 15px; /* Keep it a bit away from the edge */
+    }
+
+    /* Ensure the navigation bar and content are mobile-friendly */
+    .sticky-bar {
+        padding: 10px; /* Add padding to prevent elements from overlapping */
+    }
 }
 
 /* Hide the checkbox */
@@ -276,6 +292,7 @@ input[type="checkbox"]:checked + .slider:before {
     background-color: #333; /* Default background color */
     text-align: center; /* Center text */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Instagram button */
@@ -337,7 +354,6 @@ input[type="checkbox"]:checked + .slider:before {
     display: flex; /* Flexbox for centering text */
     align-items: center; /* Vertically center text */
     justify-content: center; /* Horizontally center text */
-    cursor: pointer; /* Pointer cursor on hover */
 }
 
 /* Animations for hobby panels */
@@ -361,10 +377,75 @@ input[type="checkbox"]:checked + .slider:before {
     background-image: url('jpgs/hiking-background.jpg'); /* Replace with the path to your hiking background image */
 }
 
-.drinking {
-    background-image: url('jpgs/drinking-background.jpg'); /* Replace with the path to your drinking background image */
+.skiing {
+    background-image: url('jpgs/skiing-background.jpg'); /* Replace with the path to your skiing background image */
 }
 
-.eating {
-    background-image: url('jpgs/eating-background.jpg'); /* Replace with the path to your eating background image */
+.kayaking {
+    background-image: url('jpgs/kayaking-background.jpg'); /* Replace with the path to your kayaking background image */
+}
+
+
+/* Feedback Form Container */
+.feedback-container {
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Feedback Form Styling */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.feedback-form label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.feedback-form textarea {
+    resize: none;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+a button {
+    background-color: #4CAF50; /* Original background color */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+}
+
+a button:hover {
+    background-color: #45a049; /* Button hover effect */
 }
