@@ -468,24 +468,37 @@ a button:hover {
         overflow-x: auto; /* Enable horizontal scrolling */
         white-space: nowrap; /* Prevent wrapping */
         padding: 10px; /* Adjust padding */
+        position: relative; /* Ensure relative positioning for scroll effect */
     }
 
     .nav-links {
-        flex: 1;
-        display: inline-flex; /* Horizontal scrolling */
-        gap: 10px; /* Space between links */
+        display: flex; /* Flexbox for layout */
+        align-items: center; /* Center items vertically */
     }
 
     .nav-link {
         flex: 0 0 auto; /* Prevent shrinking */
+        margin-right: 10px; /* Space between links */
     }
 
+    /* Hide the toggle button initially */
     .toggle-switch {
-        position: relative;
-        margin-left: auto; /* Push to the far right */
-        margin-right: 10px; /* Space from the edge */
-        top: 50%; /* Align vertically center */
+        position: absolute; /* Absolute positioning to control placement */
+        right: -100px; /* Move it off-screen initially */
+        top: 50%; /* Center vertically */
         transform: translateY(-50%); /* Adjust vertical alignment */
+        transition: right 0.3s ease; /* Smooth transition */
+    }
+
+    /* When scrolled to the end, show the toggle switch */
+    .sticky-bar::after {
+        content: ''; /* Empty content to force overflow */
+        display: inline-block; /* Inline-block to ensure space */
+        width: 200px; /* Extra space to make sure the toggle is off-screen */
+    }
+
+    .sticky-bar:hover .toggle-switch {
+        right: 10px; /* Move it into view when the container is hovered or scrolled */
     }
 
     .social-media-container {
@@ -496,23 +509,16 @@ a button:hover {
     }
 
     .social-button {
-        margin: 5px;
-        padding: 10px 15px; /* Adjust button size */
-        font-size: 14px; /* Adjust text size */
-        height: 40px; /* Adjust height */
+        width: 150px; /* Adjust width as needed */
+        height: 50px; /* Adjust height as needed */
+        margin: 5px; /* Space between buttons */
+        background-size: cover; /* Cover the button with background image */
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
-        align-items: center; /* Center text vertically */
-        justify-content: center; /* Center text horizontally */
-        background-size: contain; /* Adjust background image size */
-        background-repeat: no-repeat; /* Do not repeat background image */
-        background-position: center; /* Center background image */
-    }
-
-    /* Adjust button sizes and layout */
-    .social-button {
-        display: inline-flex; /* Align items inline */
-        width: auto; /* Allow width to adjust automatically */
-        height: 50px; /* Make the buttons taller */
-        font-size: 14px; /* Adjust font size for better visibility */
+        align-items: center;
+        justify-content: center;
+        font-size: 16px; /* Make text larger */
+        color: white; /* Text color */
     }
 }
