@@ -469,11 +469,14 @@ a button:hover {
         white-space: nowrap; /* Prevent wrapping */
         padding: 10px; /* Adjust padding */
         position: relative; /* Ensure relative positioning for scroll effect */
+        display: flex;
+        align-items: center; /* Center items vertically */
     }
 
     .nav-links {
         display: flex; /* Flexbox for layout */
         align-items: center; /* Center items vertically */
+        flex: 1; /* Allow nav-links to take up available space */
     }
 
     .nav-link {
@@ -481,11 +484,13 @@ a button:hover {
         margin-right: 10px; /* Space between links */
     }
 
-    /* Hide the toggle button initially */
     .toggle-switch {
         position: absolute; /* Absolute positioning to control placement */
         right: -100px; /* Move it off-screen initially */
-        top: 50%; /* Center vertically */
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        top: 50%; /* Center vertically in the bar */
         transform: translateY(-50%); /* Adjust vertical alignment */
         transition: right 0.3s ease; /* Smooth transition */
     }
