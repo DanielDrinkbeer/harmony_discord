@@ -191,28 +191,6 @@ footer {
     align-items: center;
 }
 
-/* Mobile Mode Adjustments */
-@media (max-width: 768px) {
-    .sticky-bar {
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent wrapping */
-    }
-
-    .nav-links {
-        flex: 1;
-        display: inline-flex; /* Horizontal scrolling */
-    }
-
-    .nav-link {
-        flex: 0 0 auto; /* Prevent shrinking */
-    }
-
-    .toggle-switch {
-        position: absolute;
-        right: 10px; /* Adjust position of toggle button */
-    }
-}
-
 /* Hide the checkbox */
 .toggle-switch input[type="checkbox"] {
     display: none;
@@ -450,4 +428,44 @@ a button {
 
 a button:hover {
     background-color: #45a049; /* Button hover effect */
+}
+
+
+/* Mobile Mode Adjustments */
+@media (max-width: 768px) {
+    .sticky-bar {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .nav-links {
+        flex: 1;
+        display: inline-flex; /* Horizontal scrolling */
+        gap: 10px; /* Space between links */
+    }
+
+    .nav-link {
+        flex: 0 0 auto; /* Prevent shrinking */
+    }
+
+    .toggle-switch {
+        position: absolute;
+        right: 0; /* Position at the very right */
+        top: 50%;
+        transform: translateY(-50%); /* Center vertically */
+        margin-right: 10px; /* Adjust spacing */
+    }
+
+    .social-media-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center buttons */
+    }
+
+    .social-button {
+        margin: 5px;
+        padding: 10px 20px; /* Adjust button size */
+        font-size: 14px; /* Adjust text size */
+    }
 }
