@@ -477,6 +477,14 @@ a button:hover {
         z-index: 1000; /* Ensure it's above other content */
     }
 
+    .harmony .sticky-bar {
+        background-color: grey;
+    }
+
+    .discord .sticky-bar {
+        background-color: var(--discord-color);
+    }
+
     .toggle-switch {
         display: inline-block; /* Keep inline with nav links */
         height: 34px; /* Adjust height */
