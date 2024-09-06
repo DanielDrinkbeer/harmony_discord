@@ -456,10 +456,10 @@ a button:hover {
 
     .toggle-switch {
         position: relative;
-        right: 0; /* Position at the very right */
-        top: 50%;
-        transform: translateY(-50%); /* Center vertically */
-        margin-right: 10px; /* Adjust spacing */
+        margin-left: auto; /* Push to the far right */
+        margin-right: 10px; /* Space from the edge */
+        top: 50%; /* Align vertically center */
+        transform: translateY(-50%); /* Adjust vertical alignment */
     }
 
     .social-media-container {
