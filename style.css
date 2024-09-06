@@ -142,15 +142,16 @@ footer {
 
 /* Sticky Navigation Bar Styles */
 .sticky-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 1000;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .harmony-color {
@@ -165,14 +166,13 @@ footer {
 
 .nav-links {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .nav-links .nav-link {
     text-decoration: none;
-    padding: 0 10px;
+    padding: 8px 16px;
     color: inherit;
-    transition: color 0.3s;
 }
 
 .sticky-bar .nav-link {
@@ -182,32 +182,34 @@ footer {
 }
 
 .sticky-bar .nav-link:hover {
-    color: #ccc;
-}
+    color: grey}
 
 
 /* Toggle Switch Styles in Navigation Bar */
 .toggle-switch {
-    position: absolute; /* Absolute positioning to ensure it's always visible */
-    top: 10px; /* Adjust this value to fit your design */
-    right: 10px; /* Position it on the top-right */
-    z-index: 1000; /* Ensure it's on top of other elements */
-    width: 60px; /* Adjust width for better visibility */
-    height: 30px; /* Adjust height for better visibility */
+    display: flex;
+    align-items: center;
 }
 
-/* Adjustments for smaller screens (mobile) */
-@media screen and (max-width: 768px) {
-    .toggle-switch {
-        width: 50px; /* Slightly reduce the size of the toggle button for smaller screens */
-        height: 25px;
-        top: 15px; /* Position it slightly lower */
-        right: 15px; /* Keep it a bit away from the edge */
+/* Mobile Mode Adjustments */
+@media (max-width: 768px) {
+    .sticky-bar {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
     }
 
-    /* Ensure the navigation bar and content are mobile-friendly */
-    .sticky-bar {
-        padding: 10px; /* Add padding to prevent elements from overlapping */
+    .nav-links {
+        flex: 1;
+        display: inline-flex; /* Horizontal scrolling */
+    }
+
+    .nav-link {
+        flex: 0 0 auto; /* Prevent shrinking */
+    }
+
+    .toggle-switch {
+        position: absolute;
+        right: 10px; /* Adjust position of toggle button */
     }
 }
 
