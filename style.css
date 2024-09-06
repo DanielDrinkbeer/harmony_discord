@@ -433,6 +433,11 @@ a button:hover {
 
 /* Mobile Mode Adjustments */
 @media (max-width: 768px) {
+
+    h1 {
+        text-align: center;
+    }
+
     .sticky-bar {
         overflow-x: auto; /* Enable horizontal scrolling */
         white-space: nowrap; /* Prevent wrapping */
@@ -450,7 +455,7 @@ a button:hover {
     }
 
     .toggle-switch {
-        position: absolute;
+        position: relative;
         right: 0; /* Position at the very right */
         top: 50%;
         transform: translateY(-50%); /* Center vertically */
