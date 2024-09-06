@@ -467,53 +467,35 @@ a button:hover {
     .sticky-bar {
         overflow-x: auto; /* Enable horizontal scrolling */
         white-space: nowrap; /* Prevent wrapping */
-        padding: 10px; /* Adjust padding */
+        display: flex; /* Flexbox for layout */
+        align-items: center; /* Center items vertically */
+        position: relative; /* Ensure positioning for layout */
     }
 
     .nav-links {
-        flex: 1;
-        display: inline-flex; /* Horizontal scrolling */
-        gap: 10px; /* Space between links */
+        display: flex; /* Flexbox for layout */
+        align-items: center; /* Center items vertically */
+        flex: 1; /* Allow nav links to take available space */
     }
 
     .nav-link {
-        flex: 0 0 auto; /* Prevent shrinking */
+        display: inline-block; /* Ensure correct spacing */
+        margin-right: 20px; /* Space between links */
     }
 
     .toggle-switch {
-        position: relative;
-        margin-top: 20px;
-        margin-left: auto; /* Push to the far right */
-        margin-right: 10px; /* Space from the edge */
-        top: 50%; /* Align vertically center */
-        transform: translateY(-50%); /* Adjust vertical alignment */
+        display: inline-block; /* Keep inline with nav links */
+        height: 34px; /* Adjust height */
+        width: 64px; /* Adjust width */
+        margin-left: auto; /* Push the toggle switch to the end */
+        /* No need for visibility control */
     }
 
     .social-media-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* Center buttons */
-        width: 100%; /* Make container extend across the width of the page */
-    }
-
-    .social-button {
-        margin: 5px;
-        padding: 10px 15px; /* Adjust button size */
-        font-size: 14px; /* Adjust text size */
-        height: 40px; /* Adjust height */
-        display: flex;
-        align-items: center; /* Center text vertically */
-        justify-content: center; /* Center text horizontally */
-        background-size: contain; /* Adjust background image size */
-        background-repeat: no-repeat; /* Do not repeat background image */
-        background-position: center; /* Center background image */
-    }
-
-    /* Adjust button sizes and layout */
-    .social-button {
-        display: inline-flex; /* Align items inline */
-        width: auto; /* Allow width to adjust automatically */
-        height: 50px; /* Make the buttons taller */
-        font-size: 14px; /* Adjust font size for better visibility */
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%; /* Ensure container spans the width of the page */
     }
 }
