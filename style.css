@@ -469,26 +469,23 @@ a button:hover {
         white-space: nowrap; /* Prevent wrapping */
         display: flex; /* Flexbox for layout */
         align-items: center; /* Center items vertically */
-        position: relative; /* Ensure positioning for layout */
-    }
-
-    .nav-links {
-        display: flex; /* Flexbox for layout */
-        align-items: center; /* Center items vertically */
-        flex: 1; /* Allow nav links to take available space */
-    }
-
-    .nav-link {
-        display: inline-block; /* Ensure correct spacing */
-        margin-right: 20px; /* Space between links */
     }
 
     .toggle-switch {
         display: inline-block; /* Keep inline with nav links */
         height: 34px; /* Adjust height */
         width: 64px; /* Adjust width */
-        margin-left: auto; /* Push the toggle switch to the end */
-        position: relative;
+        margin-right: 20px; /* Space between toggle and nav links */
+    }
+
+    .nav-links {
+        display: inline-flex; /* Flexbox for layout */
+        align-items: center; /* Center items vertically */
+    }
+
+    .nav-link {
+        display: inline-block; /* Ensure correct spacing */
+        margin-right: 20px; /* Space between links */
     }
 
     .social-media-container {
